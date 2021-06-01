@@ -1,0 +1,130 @@
+/* 播放器相关代码 */
+
+.container {
+    width: 100%;
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: PingFangSC-Regular, PingFang SC;
+  }
+  
+  .audioTimer {
+    margin-right: 10px;
+    height: 19px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #999;
+    line-height: 19px;
+    letter-spacing: 2px;
+  }
+  
+  .audioBox {
+    background: #fcfcfc;
+    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 50px 8px 8px 50px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* 小点 */
+  .audioProgress {
+    position: relative;
+    height: 6px;
+    flex: 1;
+    margin: 0 12px;
+    background: #eee;
+    border-radius: 3px;
+  }
+
+  .audioProgressBar {
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+  }
+
+  .audioProgressGone {
+    border-radius: 3px 0 0 3px;
+    background: #1eb895;
+    height: 6px;
+  }
+
+  .audioProgressPointArea {
+    position: absolute;
+    left: 0;
+    margin-top: -11px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .audioProgressPoint {
+    width: 6px;
+    height: 6px;
+    background: #1eb895;
+    border-radius: 3px;
+  }
+  
+  .audioControl {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(30, 184, 149, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
+  }
+  .doubleLine {
+    display: flex;
+    align-items: center;
+  }
+
+  .shortLine {
+    width: 4px;
+    height: 11px;
+    background: #1eb895;
+    border-radius: 2px;
+  }
+
+  .shortLine:first-child {
+    margin-right: 5px;
+  }
+  
+  .triangle {
+    margin-top: -3px;
+    margin-left: -3px;
+    background-color: #1eb895;
+    text-align: left;
+    transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
+  }
+  
+  .triangle::before,
+  .triangle::after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+  }
+  
+  .triangle,
+  .triangle::before,
+  .triangle::after {
+    width: 6px;
+    height: 6px;
+    border-top-right-radius: 30%;
+  }
+  
+  .triangle::before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%);
+  }
+  
+  .triangle::after {
+    transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+  }
+  
+  
